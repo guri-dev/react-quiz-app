@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
-
+import Home from './screens/home';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world 123</Text>
+      <Home />
     </View>     
     );
   };  
