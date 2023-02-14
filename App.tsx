@@ -1,18 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './screens/home';
+import Quiz from './screens/quiz';
+
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
       <Home />
+      <Quiz />
     </View>     
     );
   };  
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
