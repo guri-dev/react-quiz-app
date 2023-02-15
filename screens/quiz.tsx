@@ -43,12 +43,14 @@ const styles = StyleSheet.create({
     top: {
         marginVertical: 16
     },
-    option: {
+    options: {
         marginVertical: 16,
         flex: 1,
     },
     bottom: {
         marginBottom: 12,
         paddingVertical: 16,
+        justifyContent: 'space-between',
+        flexDirection: 'row'
     }
 })
