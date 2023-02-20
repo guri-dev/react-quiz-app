@@ -7,12 +7,7 @@ import Result from './screens/result';
 
 export default function App() {
   return (
-    <View>
-      {/* <Home /> */}
-      {/* <Quiz /> */}
       <NavigationContainer><MyStack /></NavigationContainer>
-      <Result />
-    </View>     
     );
   };  
 

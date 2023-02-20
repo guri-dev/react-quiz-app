@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Title from '../components/title';
 
-const home = (navigation) => {
+const home = ({navigation}) => {
   return (
     <View>
       <Title />
