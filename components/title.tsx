@@ -3,12 +3,23 @@ import React from 'react'
 
 const title = () => {
   return (
-    <View>
-      <Text>Quizller</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>MyQuiz</Text>
     </View>
   )
 }
 
 export default title
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 36,
+    fontWeight: '600',
+  },
+  container: {
+    paddingVertical: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+
+})
