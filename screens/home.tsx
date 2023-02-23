@@ -8,7 +8,7 @@ const home = ({navigation}) => {
       <Title />
       <View style={styles.bannerContainer}>
         <Image
-            source={{uri: 'https://cdni.iconscout.com/illustration/premium/preview/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
+            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
             style={styles.banner}
             resizeMode="contain"
         />

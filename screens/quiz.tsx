@@ -40,7 +40,8 @@ export default quiz
 
 const styles = StyleSheet.create({
     container: {
-        padding: 12,
+        paddingTop: 40,
+        paddingHorizontal: 20,
         height: '100%'
     },
     top: {

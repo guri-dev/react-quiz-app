@@ -25,6 +25,11 @@ const result = ({navigation}) => {
 export default result
 
 const styles = StyleSheet.create({
+  container: {
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    height: '100%'
+  },
   banner: {
     height: 300,
     width: 300,
