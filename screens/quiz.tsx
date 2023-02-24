@@ -5,7 +5,7 @@ const quiz = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.top}>
-            <Text>Imagine this is a really cool question</Text>
+            <Text style={styles.questions}>Imagine this is a really cool question</Text>
         </View>
         <View style={styles.options}>
             <TouchableOpacity>
@@ -22,15 +22,13 @@ const quiz = ({navigation}) => {
             </TouchableOpacity>
         </View>
         <View style={styles.bottom}>
-            <TouchableOpacity>
-                <Text>SKIP</Text>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>SKIP</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>NEXT</Text>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>NEXT</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=> navigation.navigate('Result')}>
-                <Text>END</Text>
-            </TouchableOpacity>
+            
         </View>
     </View>
   )
@@ -39,22 +37,38 @@ const quiz = ({navigation}) => {
 export default quiz
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 40,
-        paddingHorizontal: 20,
-        height: '100%'
-    },
-    top: {
-        marginVertical: 16
-    },
-    options: {
-        marginVertical: 16,
-        flex: 1,
-    },
     bottom: {
         marginBottom: 12,
         paddingVertical: 16,
         justifyContent: 'space-between',
         flexDirection: 'row'
-    }
+    },
+    button: {
+        backgroundColor: '#184E77',
+        padding: 12,
+        paddingHorizontal: 16,
+        borderRadius: 16,
+        alignItems: 'center',
+        marginBottom: 30,
+      },
+    buttonText: {
+        fontSize: 18,
+        fontWeight: '600',
+        color: 'white',
+    },
+    container: {
+        paddingTop: 40,
+        paddingHorizontal: 20,
+        height: '100%'
+    },
+    options: {
+        marginVertical: 16,
+        flex: 1,
+    },
+    questions: {
+        fontSize: 28,
+    },
+    top: {
+        marginVertical: 16
+    },
 })
