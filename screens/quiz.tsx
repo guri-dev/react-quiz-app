@@ -5,20 +5,20 @@ const quiz = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.top}>
-            <Text style={styles.questions}>Imagine this is a really cool question</Text>
+            <Text style={styles.questions}>Q. Imagine this is a really cool question</Text>
         </View>
         <View style={styles.options}>
-            <TouchableOpacity>
-                <Text>Cool option 1</Text>
+            <TouchableOpacity style={styles.optionButton}>
+                <Text style={styles.option}>Cool option 1</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Cool option 2</Text>
+            <TouchableOpacity style={styles.optionButton}>
+                <Text style={styles.option}>Cool option 2</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Cool option 3</Text>
+            <TouchableOpacity style={styles.optionButton}>
+                <Text style={styles.option}>Cool option 3</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Cool option 4</Text>
+            <TouchableOpacity style={styles.optionButton}>
+                <Text style={styles.option}>Cool option 4</Text>
             </TouchableOpacity>
         </View>
         <View style={styles.bottom}>
@@ -64,6 +64,18 @@ const styles = StyleSheet.create({
     options: {
         marginVertical: 16,
         flex: 1,
+    },
+    option: {
+        fontSize: 18,
+        fontWeight: '500',
+        color: 'while',
+    },
+    optionButton: {
+        paddingVertical: 12,
+        marginVertical: 6,
+        backgroundColor: '#34A0A4',
+        paddingHorizontal: 12,
+        borderRadius: 12,
     },
     questions: {
         fontSize: 28,
