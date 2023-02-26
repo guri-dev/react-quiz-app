@@ -1,8 +1,18 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const quiz = ({navigation}) => {
-  return (
+    const [questions, setQuestions] = useState();
+    const getQuiz=async()=>{
+        const url = 'https://opentdb.com/api.php?amount=10';
+        const res = await fetch(url);
+        console.log(res);
+
+    };
+    useEffect(() =>{
+        getQuiz();
+    }, []);
+    return (
     <View style={styles.container}>
         <View style={styles.top}>
             <Text style={styles.questions}>Q. Imagine this is a really cool question</Text>
@@ -68,7 +78,7 @@ const styles = StyleSheet.create({
     option: {
         fontSize: 18,
         fontWeight: '500',
-        color: 'while',
+        color: 'white',
     },
     optionButton: {
         paddingVertical: 12,
