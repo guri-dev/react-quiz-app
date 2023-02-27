@@ -4,9 +4,11 @@ import React, { useEffect, useState } from 'react'
 const quiz = ({navigation}) => {
     const [questions, setQuestions] = useState();
     const getQuiz=async()=>{
-        const url = 'https://opentdb.com/api.php?amount=10';
+        const url = 'https://opentdb.com/api.php?amount=10&type=multiple';
         const res = await fetch(url);
-        console.log(res);
+        const data = await res.json();
+        console.log(data.results);
+        setQuestions(data.results);
 
     };
     useEffect(() =>{
