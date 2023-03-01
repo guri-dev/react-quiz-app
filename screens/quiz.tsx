@@ -16,31 +16,33 @@ const quiz = ({navigation}) => {
     }, []);
     return (
     <View style={styles.container}>
-        <View style={styles.top}>
-            <Text style={styles.questions}>Q. Imagine this is a really cool question</Text>
-        </View>
-        <View style={styles.options}>
-            <TouchableOpacity style={styles.optionButton}>
-                <Text style={styles.option}>Cool option 1</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.optionButton}>
-                <Text style={styles.option}>Cool option 2</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.optionButton}>
-                <Text style={styles.option}>Cool option 3</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.optionButton}>
-                <Text style={styles.option}>Cool option 4</Text>
-            </TouchableOpacity>
-        </View>
-        <View style={styles.bottom}>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>SKIP</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>NEXT</Text>
-            </TouchableOpacity>
-            
+        <View style={styles.parent}>
+            <View style={styles.top}>
+                <Text style={styles.questions}>Q. Imagine this is a really cool question</Text>
+            </View>
+            <View style={styles.options}>
+                <TouchableOpacity style={styles.optionButton}>
+                    <Text style={styles.option}>Cool option 1</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.optionButton}>
+                    <Text style={styles.option}>Cool option 2</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.optionButton}>
+                    <Text style={styles.option}>Cool option 3</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.optionButton}>
+                    <Text style={styles.option}>Cool option 4</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.bottom}>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>SKIP</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>NEXT</Text>
+                </TouchableOpacity>
+                
+            </View>
         </View>
     </View>
   )
@@ -88,6 +90,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#34A0A4',
         paddingHorizontal: 12,
         borderRadius: 12,
+    },
+    parent: {
+        height: '100%',
     },
     questions: {
         fontSize: 28,
