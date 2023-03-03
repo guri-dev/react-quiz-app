@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 const quiz = ({navigation}) => {
     const [questions, setQuestions] = useState();
+    const [ques, setQues] = useState(0);
     const getQuiz=async()=>{
         const url = 'https://opentdb.com/api.php?amount=10&type=multiple';
         const res = await fetch(url);
@@ -14,12 +15,19 @@ const quiz = ({navigation}) => {
     useEffect(() =>{
         getQuiz();
     }, []);
+
+    const handleNext=()=> {
+        setQues(ques + 1);
+    }
+    const handleResult=()=> {
+        setQues(ques + 1);
+    }
     return (
     <View style={styles.container}>
         {questions && (
             <View style={styles.parent}>
                 <View style={styles.top}>
-                    <Text style={styles.questions}>Q. Imagine this is a really cool question</Text>
+                    <Text style={styles.questions}>Q. {questions[ques].question}</Text>
                 </View>
                 <View style={styles.options}>
                     <TouchableOpacity style={styles.optionButton}>
@@ -39,9 +47,16 @@ const quiz = ({navigation}) => {
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.buttonText}>SKIP</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>NEXT</Text>
-                    </TouchableOpacity>
+                    {ques !== 9 && (
+                        <TouchableOpacity style={styles.button} onPress={handleNext}>
+                            <Text style={styles.buttonText}>NEXT</Text>
+                        </TouchableOpacity>
+                    )}
+                    {ques === 9 && (
+                        <TouchableOpacity style={styles.button} onPress={handleResult}>
+                            <Text style={styles.buttonText}>Show Result</Text>
+                        </TouchableOpacity>
+                    )}
                     
                 </View>
             </View>
