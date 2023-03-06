@@ -4,12 +4,13 @@ import React, { useEffect, useState } from 'react'
 const quiz = ({navigation}) => {
     const [questions, setQuestions] = useState();
     const [ques, setQues] = useState(0);
+    const [options, setOptions] = useState([]);
     const getQuiz=async()=>{
         const url = 'https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986';
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data.results);
         setQuestions(data.results);
+        generateOptionsAndShuffle(data.results[0]);
 
     };
     useEffect(() =>{
@@ -21,6 +22,13 @@ const quiz = ({navigation}) => {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
+    }
+    const generateOptionsAndShuffle=(_question)=> {
+        const option = [..._question.incorrect_answers];
+        option.push(_question.correct_answer);
+        console.log(option);
+        shuffleArray(option);
+        console.log(option);
     }
 
     const handleNext=()=> {
