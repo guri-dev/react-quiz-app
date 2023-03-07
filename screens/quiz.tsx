@@ -10,7 +10,7 @@ const quiz = ({navigation}) => {
         const res = await fetch(url);
         const data = await res.json();
         setQuestions(data.results);
-        generateOptionsAndShuffle(data.results[0]);
+        setOptions(generateOptionsAndShuffle(data.results[0]));
 
     };
     useEffect(() =>{
@@ -26,13 +26,13 @@ const quiz = ({navigation}) => {
     const generateOptionsAndShuffle=(_question)=> {
         const option = [..._question.incorrect_answers];
         option.push(_question.correct_answer);
-        console.log(option);
         shuffleArray(option);
-        console.log(option);
+        return option;
     }
 
     const handleNext=()=> {
         setQues(ques + 1);
+        setOptions(generateOptionsAndShuffle(questions[ques+1]));
     }
     const handleResult=()=> {
         setQues(ques + 1);
@@ -46,16 +46,16 @@ const quiz = ({navigation}) => {
                 </View>
                 <View style={styles.options}>
                     <TouchableOpacity style={styles.optionButton}>
-                        <Text style={styles.option}>Cool option 1</Text>
+                        <Text style={styles.option}>{decodeURIComponent(options[0])}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.optionButton}>
-                        <Text style={styles.option}>Cool option 2</Text>
+                        <Text style={styles.option}>{decodeURIComponent(options[1])}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.optionButton}>
-                        <Text style={styles.option}>Cool option 3</Text>
+                        <Text style={styles.option}>{decodeURIComponent(options[2])}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.optionButton}>
-                        <Text style={styles.option}>Cool option 4</Text>
+                        <Text style={styles.option}>{decodeURIComponent(options[3])}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.bottom}>
