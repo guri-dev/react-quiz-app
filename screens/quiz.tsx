@@ -35,15 +35,17 @@ const quiz = ({navigation}) => {
         setQues(ques + 1);
         setOptions(generateOptionsAndShuffle(questions[ques+1]));
     }
-    const handleResult=()=> {
+    const handleShowResult=()=> {
         setQues(ques + 1);
     }
     const handleSelectedOption=(_option)=> {
         if (_option===questions[ques].correct_answer) {
             setScore(score + 10);
         }
-        setQues(ques + 1);
-        setOptions(generateOptionsAndShuffle(questions[ques+1]));
+        if (ques !== 9) {
+            setQues(ques + 1);
+            setOptions(generateOptionsAndShuffle(questions[ques+1]));
+        }
     }
     return (
     <View style={styles.container}>
@@ -76,7 +78,7 @@ const quiz = ({navigation}) => {
                         </TouchableOpacity>
                     )}
                     {ques === 9 && (
-                        <TouchableOpacity style={styles.button} onPress={handleResult}>
+                        <TouchableOpacity style={styles.button} onPress={handleShowResult}>
                             <Text style={styles.buttonText}>Show Result</Text>
                         </TouchableOpacity>
                     )}
