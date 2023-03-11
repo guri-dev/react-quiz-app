@@ -1,7 +1,9 @@
 import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 
-const result = ({navigation}) => {
+const result = ({navigation, route}) => {
+  const params = route.params;
+  console.log(params);
   return (
     <View>
       <View>

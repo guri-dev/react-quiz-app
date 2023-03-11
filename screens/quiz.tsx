@@ -36,7 +36,9 @@ const quiz = ({navigation}) => {
         setOptions(generateOptionsAndShuffle(questions[ques+1]));
     }
     const handleShowResult=()=> {
-        navigation.navigate('Result');
+        navigation.navigate('Result', {
+            score: score
+        });
     }
     const handleSelectedOption=(_option)=> {
         if (_option===questions[ques].correct_answer) {
