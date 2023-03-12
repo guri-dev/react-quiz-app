@@ -16,8 +16,8 @@ const result = ({navigation, route}) => {
             resizeMode="contain"
         />
       </View>
-      <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
-        <Text>Home</Text>
+      <TouchableOpacity onPress={()=> navigation.navigate('Home')} style={styles.button}>
+        <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
     </View>
     
@@ -27,6 +27,21 @@ const result = ({navigation, route}) => {
 export default result
 
 const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#184E77',
+    padding: 12,
+    paddingHorizontal: 16,
+    borderRadius: 16,
+    alignItems: 'center',
+    marginBottom: 30,
+    maxWidth: '25%',
+    alignSelf: 'center'
+  },
+  buttonText: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: 'white',
+  },
   container: {
     paddingTop: 40,
     paddingHorizontal: 20,
