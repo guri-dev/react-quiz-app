@@ -1,23 +1,22 @@
 import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import Title from '../components/title';
 
 const result = ({navigation, route}) => {
   const params = route.params;
   console.log(params);
   return (
-    <View>
-      <View>
-        <Text>Result</Text>
-      </View>
+    <View style={styles.container}>
+      <Title />
       <View style={styles.bannerContainer}>
         <Image
-            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/q-and-a-service-3678714-3098907.png'}}
+            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
             style={styles.banner}
             resizeMode="contain"
         />
       </View>
-      <TouchableOpacity onPress={()=> navigation.navigate('Home')} style={styles.button}>
-        <Text style={styles.buttonText}>Home</Text>
+      <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
+        <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>
     </View>
     
