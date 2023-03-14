@@ -26,21 +26,6 @@ const result = ({navigation, route}) => {
 export default result
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: '#184E77',
-    padding: 12,
-    paddingHorizontal: 16,
-    borderRadius: 16,
-    alignItems: 'center',
-    marginBottom: 30,
-    maxWidth: '25%',
-    alignSelf: 'center'
-  },
-  buttonText: {
-      fontSize: 18,
-      fontWeight: '600',
-      color: 'white',
-  },
   container: {
     paddingTop: 40,
     paddingHorizontal: 20,
@@ -53,5 +38,19 @@ const styles = StyleSheet.create({
   bannerContainer: {
       justifyContent: 'center',
       alignItems: 'center',
+      flex: 1,
+  },
+  button: {
+    width: '100%',
+    backgroundColor: '#184E77',
+    padding: 20,
+    borderRadius: 16,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  buttonText: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: 'white',
   }
 })
