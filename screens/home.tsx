@@ -5,7 +5,7 @@ import Title from '../components/title';
 const home = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Title />
+      <Title titleText="Home"/>
       <View style={styles.bannerContainer}>
         <Image
             source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}

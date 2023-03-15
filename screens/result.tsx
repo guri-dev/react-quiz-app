@@ -7,7 +7,7 @@ const result = ({navigation, route}) => {
   console.log(params);
   return (
     <View style={styles.container}>
-      <Title />
+      <Title titleText="Result" />
       <View style={styles.bannerContainer}>
         <Image
             source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
@@ -16,7 +16,7 @@ const result = ({navigation, route}) => {
         />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
-        <Text style={styles.buttonText}>Start</Text>
+        <Text style={styles.buttonText}>Go to Home</Text>
       </TouchableOpacity>
     </View>
     
