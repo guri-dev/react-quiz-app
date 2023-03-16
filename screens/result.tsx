@@ -2,15 +2,15 @@ import { TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Title from '../components/title';
 
-const result = ({navigation, route}) => {
-  const params = route.params;
-  console.log(params);
+const Result = ({navigation, route}) => {
+  const {score} = route.params;
   return (
     <View style={styles.container}>
       <Title titleText="Result" />
+      <Text>{score}</Text>
       <View style={styles.bannerContainer}>
         <Image
-            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
+            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/men-celebrating-victory-4587301-3856211.png'}}
             style={styles.banner}
             resizeMode="contain"
         />
@@ -23,7 +23,7 @@ const result = ({navigation, route}) => {
   )
 }
 
-export default result
+export default Result
 
 const styles = StyleSheet.create({
   container: {

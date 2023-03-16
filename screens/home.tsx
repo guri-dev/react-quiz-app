@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Title from '../components/title';
 
-const home = ({navigation}) => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Title titleText="Home"/>
@@ -20,7 +20,7 @@ const home = ({navigation}) => {
   )
 }
 
-export default home
+export default Home
 
 const styles = StyleSheet.create({
     container: {

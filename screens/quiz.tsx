@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
-const quiz = ({navigation}) => {
+const Quiz = ({navigation}) => {
     const [questions, setQuestions] = useState();
     const [ques, setQues] = useState(0);
     const [score, setScore] = useState(0);
@@ -89,7 +89,7 @@ const quiz = ({navigation}) => {
   )
 }
 
-export default quiz
+export default Quiz
 
 const styles = StyleSheet.create({
     bottom: {
