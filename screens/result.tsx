@@ -4,13 +4,15 @@ import Title from '../components/title';
 
 const Result = ({navigation, route}) => {
   const {score} = route.params;
+  const resultBanner = score > 40 ? 'https://cdni.iconscout.com/illustration/premium/thumb/men-celebrating-victory-4587301-3856211.png' :
+  'https://cdni.iconscout.com/illustration/free/thumb/concept-about-business-failure-1862195-1580189.png';
   return (
     <View style={styles.container}>
       <Title titleText="Result" />
-      <Text>{score}</Text>
+      <Text style={styles.scoreValue}>{score}</Text>
       <View style={styles.bannerContainer}>
         <Image
-            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/men-celebrating-victory-4587301-3856211.png'}}
+            source={{uri: resultBanner}}
             style={styles.banner}
             resizeMode="contain"
         />
@@ -34,6 +36,11 @@ const styles = StyleSheet.create({
   banner: {
     height: 300,
     width: 300,
+  },
+  scoreValue: {
+    fontSize: 24,
+    fontWeight: "800",
+    alignSelf: 'center'
   },
   bannerContainer: {
       justifyContent: 'center',

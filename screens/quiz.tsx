@@ -48,6 +48,9 @@ const Quiz = ({navigation}) => {
             setQues(ques + 1);
             setOptions(generateOptionsAndShuffle(questions[ques+1]));
         }
+        if (ques === 9) {
+            handleShowResult();
+        }
     }
     return (
     <View style={styles.container}>
