@@ -17,7 +17,7 @@ const Result = ({navigation, route}) => {
             resizeMode="contain"
         />
       </View>
-      <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
+      <TouchableOpacity onPress={()=> navigation.navigate('Home')} style={styles.button}>
         <Text style={styles.buttonText}>Go to Home</Text>
       </TouchableOpacity>
     </View>
