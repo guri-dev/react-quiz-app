@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Title from '../components/title';
+import CustomInput from '../components/CustomInput/CustomInput';
 
 const Signin = ({navigation}) => {
   return (
@@ -11,7 +12,8 @@ const Signin = ({navigation}) => {
             source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
             style={styles.banner}
             resizeMode="contain"
-        />
+        />  
+        <CustomInput />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
         <Text style={styles.buttonText}>Sign in here</Text>
