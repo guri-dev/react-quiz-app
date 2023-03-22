@@ -14,7 +14,7 @@ const Signin = ({navigation}) => {
         />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
-        <Text style={styles.buttonText}>Start</Text>
+        <Text style={styles.buttonText}>Sign in here</Text>
       </TouchableOpacity>
     </View>
   )
