@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 import React from 'react'
 
 const CustomInput = () => {
   return (
     <View>
-      <Text>CustomInput</Text>
+      <TextInput placeholder='placeholder'/>
     </View>
   )
 }
