@@ -4,9 +4,14 @@ import React from 'react'
 const CustomInput = () => {
   return (
     <View>
-      <TextInput placeholder='placeholder'/>
+      <TextInput placeholder='placeholder' style={styles.input}/>
     </View>
   )
-}
+};
+
+const styles = StyleSheet.create({
+  container: {},
+  input: {},
+});
 
 export default CustomInput
