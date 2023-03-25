@@ -10,7 +10,9 @@ const CustomInput = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    backgroundColor: 'white',
+  },
   input: {},
 });
 
