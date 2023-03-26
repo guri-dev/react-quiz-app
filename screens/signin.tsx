@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: 40,
         paddingHorizontal: 20,
-        height: '100%'
+        height: '100%',
+        padding: 20,
+        alignItems: 'center',
     },
     banner: {
       height: 300,
