@@ -8,11 +8,6 @@ const Signin = ({navigation}) => {
     <View style={styles.container}>
       <Title titleText="Home"/>
       <View style={styles.bannerContainer}>
-        <Image
-            source={{uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png'}}
-            style={styles.banner}
-            resizeMode="contain"
-        />  
         <CustomInput />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
@@ -26,20 +21,10 @@ export default Signin
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 40,
+        paddingTop: 4,
         paddingHorizontal: 20,
         height: '100%',
-        padding: 20,
         alignItems: 'center',
-    },
-    banner: {
-      height: 300,
-      width: 300,
-    },
-    bannerContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
     },
     button: {
       width: '100%',
