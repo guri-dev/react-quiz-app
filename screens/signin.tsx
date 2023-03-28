@@ -7,7 +7,7 @@ const Signin = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Title titleText="Home"/>
-      <View style={styles.bannerContainer}>
+      <View style={styles.loginContainer}>
         <CustomInput />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
@@ -21,10 +21,17 @@ export default Signin
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 4,
-        paddingHorizontal: 20,
+        paddingTop: 2,
+        paddingHorizontal: 2,
         height: '100%',
         alignItems: 'center',
+    },
+    loginContainer: {
+      width: 200,
+    },
+    banner: {
+      width: 80,
+      height: 80,
     },
     button: {
       width: '100%',
