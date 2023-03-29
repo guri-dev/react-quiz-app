@@ -27,7 +27,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     loginContainer: {
-      width: 200,
+      width: '100%',
+      borderWidth: 1,
+      borderRadius: 5,
+      paddingHorizontal: 10,
     },
     banner: {
       width: 80,
