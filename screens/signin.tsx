@@ -8,6 +8,12 @@ const Signin = ({navigation}) => {
     <View style={styles.container}>
       <Title titleText="Home"/>
       <View style={styles.loginContainer}>
+      <Image
+            source={{uri: 'https://dummyimage.com/80x80/cc1acc/fff&text=Logo'}}
+            style={styles.banner}
+            resizeMode="contain"
+        />
+      
         <CustomInput />
       </View>
       <TouchableOpacity onPress={()=> navigation.navigate('Quiz')} style={styles.button}>
@@ -31,10 +37,12 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 5,
       paddingHorizontal: 5,
+      alignItems: 'center',
     },
     banner: {
       width: 80,
       height: 80,
+      alignItems: 'center',
     },
     button: {
       width: '100%',
