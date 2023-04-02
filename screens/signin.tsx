@@ -28,7 +28,7 @@ export default Signin
 const styles = StyleSheet.create({
     container: {
         paddingTop: 2,
-        paddingHorizontal: 1,
+        paddingHorizontal: 2,
         height: '100%',
         alignItems: 'center',
     },
